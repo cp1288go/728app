@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				min-width: 960px;
+				height: 100%;
+			}
+			.bg{
+				position: absolute;
+				z-index: -3;
+				width: 100%;
+				height: 100%;
+			}
+			.wrap{
+				position: relative;
+				margin: 0 auto;
+				width: 100%;
+				min-width: 960px;
+				height: 100%;
+			}
+			.continue{
+				position: absolute;
+				width: 13.4%;
+				top:50%;
+				left: 50%;
+				margin-left: -6.7%;
+				margin-top: -13.4%;
+			}
+			.iosCode{
+				position: absolute;
+				width: 16.4%;
+				top:8.5%;
+				left: 50%;
+				margin-left: -25.2%;
+			}
+			.andrioCode{
+				position: absolute;
+				width: 16.4%;
+				top:8.5%;
+				left: 50%;
+				margin-left: 8.9%;
+			}
+			.iosDown{
+				position: absolute;
+				width: 18.8%;
+				top:54.5%;
+				left: 50%;
+				margin-left: -26.4%;
+			}
+			.andrioDown{
+				position: absolute;
+				width: 18.8%;
+				top:54.5%;
+				left: 50%;
+				margin-left: 7.8%;
+			}
+			.text{
+				position: absolute;
+				width: 27.7%;
+				top:66.5%;
+				left: 50%;
+				margin-left: 7.8%;
+			}
+		</style>
+		<script type="text/javascript">
+			inspect()
+			//检查是PC还是mobile
+			function inspect(){
+				var sUserAgent = navigator.userAgent.toLowerCase();  
+		        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";  
+		        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";  
+		        var bIsMidp = sUserAgent.match(/midp/i) == "midp";  
+		        var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";  
+		        var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";  
+		        var bIsAndroid = sUserAgent.match(/android/i) == "android";  
+		        var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";  
+		        var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";   
+		        if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) { 
+		        	//移动端跳转地址
+ 					window.location.href="wap/index.html" 
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<img src="images/bg.png" alt="" class="bg"/>
+		<div class="wrap">
+			<img src="images/iOS_AppStore.png" alt=""  class="iosCode"/>
+			<img src="images/Android.png" alt="" class="andrioCode"/>
+			<img src="images/continue.png" class="continue" onclick="web()"/>
+			<img src="images/iosdown.png" class="iosDown" onclick="ios()"/>
+			<img src="images/andriodown.png" class="andrioDown" onclick="andrio()"/>
+			<img src="images/text.png" alt="" class="text"/>
+		</div>
+	</body>
+	<script type="text/javascript">
+		function web(){
+			window.location.href="https://www.728jc.com"
+		}
+		function ios(){
+			window.location.href="https://itunes.apple.com/cn/app/id1272043345"
+		}
+		function andrio(){
+			window.location.href="https://coding.net/u/code728/p/728code/git/raw/master/728app.apk"
+		}
+		
+	</script>
+</html>
